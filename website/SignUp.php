@@ -1,3 +1,7 @@
+<?php
+include_once 'includes/register.inc.php';
+include_once 'includes/functions.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,6 +29,8 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script type="text/JavaScript" src="js/sha512.js"></script> 
+    <script type="text/JavaScript" src="js/forms.js"></script>
 <!--===============================================================================================-->
 </head>
 <body>
@@ -33,9 +39,14 @@
 			<div class="container-login100" style="background-image: url('images/AI-World.jpg');">
 				<div class="wrap-login100 p-t-30 p-b-50">
 					<span class="login100-form-title p-b-41">
-						S.H.A.T Bot Sign Up
+						S.E.R.S.H. Sign Up
 					</span>
-					<form class="login100-form validate-form p-b-33 p-t-5">
+					<?php
+					if (!empty($error_msg)) {
+						echo $error_msg;
+					}
+					?>
+					<form class="login100-form validate-form p-b-33 p-t-5" method="post" name="registration_form" action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" autocomplete="off">
 
 						<div class="wrap-input100 validate-input" data-validate = "Enter username">
 							<input class="input100" type="text" name="username" placeholder="Choose an user name">
@@ -48,12 +59,23 @@
 						</div>
 
 						<div class="wrap-input100 validate-input" data-validate="Enter password">
-							<input class="input100" type="password" name="pass" placeholder="Re-enter password">
+							<input class="input100" type="password" name="password" placeholder="Enter password">
+							<span class="focus-input100" data-placeholder="&#xe80f;"></span>
+						</div>
+						
+						<div class="wrap-input100 validate-input" data-validate="Enter password">
+							<input class="input100" type="password" name="confirmpwd" placeholder="Re-enter password">
 							<span class="focus-input100" data-placeholder="&#xe80f;"></span>
 						</div>
 
 						<div class="container-login100-form-btn m-t-32">
-							<button class="login100-form-btn">
+							<button class="login100-form-btn" type="button" 
+                   value="Register" 
+                   onclick="return regformhash(this.form,
+                                   this.form.username,
+                                   this.form.email,
+                                   this.form.password,
+                                   this.form.confirmpwd);">
 								Sign Up
 							</button>
 						</div>
@@ -63,12 +85,12 @@
 
 						<div class="text-center p-t-25">
 							<p> </p>
-							<li><a>Already have an account? <span></span></a><a href="loginIn.html">Login<span></span></a></li>
+							<li><a>Already have an account? <span></span></a><a href="loginIn.php">Login<span></span></a></li>
 						</div>
 
 						<div class="text-center p-t-25">
 							<p> </p>
-							<li><a><span></span></a><a href="index.html">Home Page<span></span></a></li>
+							<li><a><span></span></a><a href="index.php">Home Page<span></span></a></li>
 						</div>
 
 					</form>

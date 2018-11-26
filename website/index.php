@@ -1,3 +1,9 @@
+<?php
+include_once 'includes/connector.php';
+include_once 'includes/functions.php';
+
+StartSession();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-	<title>HTML Template</title>
+	<title>S.E.R.S.H Home</title>
 
 	<!-- Google font -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
@@ -63,7 +69,7 @@
 				<div class="navbar-header">
 					<!-- Logo -->
 					<div class="navbar-brand">
-						<a href="index.html">
+						<a href="index.php">
 							<img class="logo" src="img/logo.png" alt="logo">
 							<img class="logo-alt" src="img/logo-alt.png" alt="logo">
 						</a>
@@ -85,7 +91,12 @@
 					<li><a href="#contact">Contact</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-                    <li><a href="loginIn.html">Log In <span></span></a></li>
+					<?php if (login_check($mysqli) == true) : ?>
+						<li><a>Welcome back, <?php echo htmlentities($_SESSION['username']); ?>!<span></span></a></li>
+						<li><a href="includes/logout.php">Log Out<span></span></a></li>
+					<?php else : ?>
+						<li><a href="loginIn.php">Log In<span></span></a></li>
+					<?php endif; ?>
                 </ul>
 				<!-- /Main navigation -->
 			</div>
@@ -380,7 +391,7 @@
 
 					<!-- footer logo -->
 					<div class="footer-logo">
-						<a href="index.html"><img src="img/logo-alt.png" alt="logo"></a>
+						<a href="index.php"><img src="img/logo-alt.png" alt="logo"></a>
 					</div>
 					<!-- /footer logo -->
 
