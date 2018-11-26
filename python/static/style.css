@@ -20,19 +20,19 @@ h3 {
 #chatbox {
     margin-left: auto;
     margin-right: auto;
-    width: 40%;
+    width: 80%;
     margin-top: 60px;
 }
 
 #userInput {
     margin-left: auto;
     margin-right: auto;
-    width: 40%;
+    width: 80%;
     margin-top: 60px;
 }
 
 #textInput {
-    width: 87%;
+    width: 93%;
     border: none;
     border-bottom: 3px solid #009688;
     font-family: monospace;
@@ -40,9 +40,14 @@ h3 {
 }
 
 #buttonInput {
-    padding: 3px;
+    color: white;
     font-family: monospace;
     font-size: 17px;
+    text-align: left;
+    line-height: 30px;
+	background-color: #EF5350;
+    padding: 5px;
+    border-radius: 10px;
 }
 
 .userText {
@@ -56,7 +61,7 @@ h3 {
 .userText span {
     background-color: #009688;
     padding: 10px;
-    border-radius: 2px;
+    border-radius: 10px;
 }
 
 .botText {
@@ -70,7 +75,7 @@ h3 {
 .botText span {
     background-color: #EF5350;
     padding: 10px;
-    border-radius: 2px;
+    border-radius: 10px;
 }
 
 #tidbit {
