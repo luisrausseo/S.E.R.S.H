@@ -70,8 +70,8 @@ StartSession();
 					<!-- Logo -->
 					<div class="navbar-brand">
 						<a href="index.php">
-							<img class="logo" src="img/logo.png" alt="logo">
-							<img class="logo-alt" src="img/logo-alt.png" alt="logo">
+							<img class="logo" src="images/logo.png" alt="logo">
+							<img class="logo-alt" src="images/logo-alt.png" alt="logo">
 						</a>
 					</div>
 					<!-- /Logo -->
@@ -328,11 +328,7 @@ StartSession();
 
 				<!-- contact -->
 				<div class="col-sm-4">
-					<div class="contact">
-						<i class="fa fa-phone"></i>
-						<h3>Phone</h3>
-						<p>512-421-3940</p>
-					</div>
+
 				</div>
 				<!-- /contact -->
 
@@ -341,29 +337,25 @@ StartSession();
 					<div class="contact">
 						<i class="fa fa-envelope"></i>
 						<h3>Email</h3>
-						<p>email@support.com</p>
+						<p>shatbot@outlook.com</p>
 					</div>
 				</div>
 				<!-- /contact -->
 
 				<!-- contact -->
 				<div class="col-sm-4">
-					<div class="contact">
-						<i class="fa fa-map-marker"></i>
-						<h3>Address</h3>
-						<p>1739 Bubby Drive</p>
-					</div>
+	
 				</div>
 				<!-- /contact -->
 
 				<!-- contact form -->
 				<div class="col-md-8 col-md-offset-2">
-					<form class="contact-form">
+					<form id="contact-form" role="form" action="https://formspree.io/shatbot@outlook.com" method="post">
 						<input type="text" class="input" placeholder="Name">
 						<input type="email" class="input" placeholder="Email">
 						<input type="text" class="input" placeholder="Subject">
 						<textarea class="input" placeholder="Message"></textarea>
-						<button class="main-btn">Send message</button>
+						<button type="submit" class="main-btn">Send message</button>
 					</form>
 				</div>
 				<!-- /contact form -->
@@ -391,18 +383,13 @@ StartSession();
 
 					<!-- footer logo -->
 					<div class="footer-logo">
-						<a href="index.php"><img src="img/logo-alt.png" alt="logo"></a>
+						<a href="index.php"><img src="images/logo-alt.png" alt="logo"></a>
 					</div>
 					<!-- /footer logo -->
 
 					<!-- footer follow -->
 					<ul class="footer-follow">
-						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-						<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-						<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-						<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+						<li><a href="https://github.com/luisrausseo/S.E.R.S.H"><i class="fa fa-github"></i></a></li>
 					</ul>
 					<!-- /footer follow -->
 
